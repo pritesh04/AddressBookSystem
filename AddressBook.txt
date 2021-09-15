@@ -1,0 +1,11 @@
+
+1)create database Address_BookService; 
+2)create table Address_Book(firstName varchar(150),lastName varchar(150), address varchar(150),city varchar(150), state varchar(150),zip int, phoneNumbers int , email varchar(150));
+3)insert into Address_Book values('met', 'bhangale','pinak CHS', 'dombivali', 'goa', 421201, 8928877307,'abc@gmail.com');
+4)update Address_Book set zip=421202 where firstName = 'pritesh';
+5)delete from  Address_Book where firstName='pritesh';
+6)select * from Address_Book where city='dombivali' or state='maharashtra';
+7)select count(state) from Address_Book;
+8)select firstName from Address_Book where city='dombivali' order by firstName;
+9)alter table Address_Book add column name varchar(150),add column type varchar(150);
+10)select count(firstName),type from Address_Book group by type;
