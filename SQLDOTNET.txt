@@ -1,0 +1,11 @@
+1) create database payroll_service
+2)create table payroll_service(id INT unsigned NOT NULL AUTO_INCREMENT, name varchar(150) NOT NULL, salary double NOT NULL, start DATE NOT NULL, PRIMARY KEY(id));
+3)insert into payroll_service values(3, "3i", 30000, '21-02-02');
+4)select * from payroll_service;
+5)select salary from payroll_service where name='pritesh';
+	select start, name  from payroll_service where start BETWEEN CAST('1998-01-01' as DATE)  and DATE(NOW());
+6)alter table payroll_service add column gender varchar(2);
+7)select sum(salary) from payroll_service where gender='f' group by gender;
+select avg(salary) from payroll_service group by gender;
+select min(salary) from payroll_service group by gender;
+select max(salary) from payroll_service group by gender;
